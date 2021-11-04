@@ -61,3 +61,12 @@ Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cl
  ```shell
  npm install gatsby-remark-images
  ```
+
+## integrate with contentful
+
+ install gatsby contentful plugin and env
+<https://www.gatsbyjs.com/plugins/gatsby-source-contentful/>
+
+ ```shell
+ npm install gatsby-source-contentful dotenv
+ ```
