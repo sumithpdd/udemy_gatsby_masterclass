@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import gatsbyLogo from "../images/gatsby-icon.png"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -16,17 +17,27 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <span style={{
+        display:'flex' ,alignItems:'center'
+      }}>
+        <img src={gatsbyLogo} alt ="Gatsby Garb Logo" style={{
+          borderRadius: '50%',
+          border:'3px solid orange',
+          margin:'0 5px',
+          width: '50px'
+        }}/>
+        <h1 style={{ margin: 0 }}>
+          <Link
+            to="/"
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+            }}
+          >
+            {siteTitle}
+          </Link>
+        </h1>
+      </span>
     </div>
   </header>
 )
