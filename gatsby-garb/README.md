@@ -53,3 +53,11 @@ Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cl
  ```shell
  npm install gatsby-transformer-remark
  ```
+
+## To add images for markdown blogpost?
+
+ install gatsby remark images package
+
+ ```shell
+ npm install gatsby-remark-images
+ ```

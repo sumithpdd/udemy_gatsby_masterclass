@@ -4,7 +4,7 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `Sumith P D`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
-    createdAt: 2021
+    createdAt: 2021,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,7 +16,17 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+          },
+        ],
+      }
+    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
