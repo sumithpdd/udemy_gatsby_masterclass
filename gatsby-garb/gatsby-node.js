@@ -9,7 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark (limit:1000){
         edges {
           node {
             fields {
@@ -22,7 +22,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   const posts = result.data.allMarkdownRemark.edges
-  
+
   posts.forEach(({ node: post }) => {
     createPage({
       path: `posts${post.fields.slug}`,
