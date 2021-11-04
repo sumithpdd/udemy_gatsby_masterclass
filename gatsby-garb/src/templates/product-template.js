@@ -21,10 +21,21 @@ const ProductTemplate = ({ data: { contentfulProduct } }) => (
       </h2>
       <h4>{contentfulProduct.price}</h4>
       <p>{contentfulProduct.description}</p>
-
+      <button
+        style={{
+          background: "darkorange",
+          color: "white",
+          padding: "0.3em",
+          borderRadius: "5px",
+          cursor: "pointer",
+        }}
+      >
+        Add to cart
+      </button>
       <GatsbyImage
         style={{ margin: "0 auto", maxWidth: 600 }}
-        image={getImage(contentfulProduct.image)} alt="{contentfulProduct.name}"
+        image={getImage(contentfulProduct.image)}
+        alt="{contentfulProduct.name}"
       />
     </div>
   </Layout>
@@ -42,9 +53,8 @@ export const query = graphql`
         gatsbyImageData
         fixed {
           src
-          }        
         }
-      
+      }
     }
   }
 `
